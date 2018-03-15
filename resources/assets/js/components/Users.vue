@@ -5,7 +5,7 @@
                 <a href="#">
                 <div class="col-sm-4">
                     <div class="text-center">
-                        <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
+                        <img alt="image" class="img-circle m-t-xs img-responsive" src="http://webapplayers.com/inspinia_admin-v2.7.1/img/a8.jpg">
                         <div class="m-t-xs font-bold">Graphics designer</div>
                     </div>
                 </div>

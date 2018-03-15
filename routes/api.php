@@ -29,10 +29,10 @@ Route::group(['middleware' => 'jwt.refresh'], function(){
 });
 
 // App v1 API
-Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
+Route::group(['prefix' => 'v1', 'middleware' => 'jwt.auth'], function () {
 	Route::get('products', 'Api\v1\ProductController@index');
 	Route::get('products/{product}', 'Api\v1\ProductController@show');
 	Route::post('products','Api\v1\ProductController@store');
 	Route::put('products/{product}','Api\v1\ProductController@update');
-	Route::delete('products/{product}', 'Api\v1\ProductController@delete');
+	Route::delete('products/{product}', 'Api\v1\ProductController@destroy');
 });

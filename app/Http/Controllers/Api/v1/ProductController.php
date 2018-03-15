@@ -37,7 +37,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
+        $product = new Product;
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->image = $request->image;
+        $product->save();
         return response()->json($product, 201);
     }
 
@@ -47,9 +52,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return new ProductResource(Product::find($id));
+        //return new ProductResource();
+        return response()->json(Product::find($id), 201);
     }
 
     /**
@@ -70,9 +76,14 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request)
     {
-        $product->update($request->all());
+        $product = Product::find($request->id);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->image = $request->image;
+        $product->save();
         return response()->json($product, 200);
     }
 
@@ -85,6 +96,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        return response()->json(null, 204);
+        return response()->json(array('status'=>true), 200);
     }
 }

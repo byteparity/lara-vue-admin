@@ -13,8 +13,13 @@ import Login from './components/Login.vue';
 import Signup from './components/Signup.vue';
 import Contact from './components/Contact.vue';
 import Users from './components/Users.vue';
+import Product from './components/Product.vue';
+import AddEditProduct from './components/AddEditProduct.vue';
+import VueToastr from '@deveodk/vue-toastr';
+import '@deveodk/vue-toastr/dist/@deveodk/vue-toastr.css';
 
 Vue.use(VueRouter);
+Vue.use(VueToastr);
 Vue.use(VueAxios, axios);
 
 axios.defaults.baseURL = 'http://laravueadmin.com/api';
@@ -46,6 +51,24 @@ const router = new VueRouter({
             meta: {
                 auth: true,
                 pageName: 'Dashboard'
+            }
+        },
+        {
+            path: '/product',
+            name: 'product',
+            component: Product,
+            meta: {
+                auth: true,
+                pageName: 'Product List'
+            }
+        },
+        {
+            path: '/product/:id',
+            name: 'addEditProduct',
+            component: AddEditProduct,
+            meta: {
+                auth: true,
+                pageName: 'Product Page'
             }
         },
         {
@@ -84,6 +107,31 @@ Vue.use(require('@websanova/vue-auth'), {
 App.router = Vue.router;
 
 new Vue(App).$mount('#app');
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = require('axios');
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+let token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
 Pace.start();
 $(document).ready(function () {
     // Add body-small class if window less than 768px
