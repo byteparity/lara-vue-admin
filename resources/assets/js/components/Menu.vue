@@ -6,7 +6,7 @@
                     <div class="dropdown profile-element">
                         <router-link :to="{ name: 'profile' }">
                         <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{name}}</strong>
-                          <span class="text-muted text-xs block">Last Update : {{updated_at}} </span> </span> </span>
+                          <span class="text-muted text-xs block">{{role}} </span> </span> </span>
                         </router-link>
                     </div>
                     <div class="logo-element">
@@ -30,7 +30,8 @@ export default {
       email: "",
       id: null,
       name: "",
-      updated_at: ""
+      updated_at: "",
+      role: ""
     };
   },
   mounted() {
@@ -52,6 +53,7 @@ export default {
       this.id = userData.id;
       this.created_at = userData.created_at;
       this.updated_at = userData.updated_at;
+      this.role = userData.role;
     },
     SmoothlyMenu() {
       if (

@@ -22,6 +22,7 @@
     "pace": "github:HubSpot/pace#v1.0.2",
     "vue": "^2.5.7",
     "vue-axios": "^2.0.2",
+    "vue-google-autocomplete": "^1.0.15",
     "vue-loader": "^13.7.0",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.13",
