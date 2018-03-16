@@ -21,7 +21,7 @@ Route::post('auth/register', 'AuthController@register');
 Route::post('auth/login', 'AuthController@login');
 Route::group(['middleware' => 'jwt.auth'], function(){
 	Route::get('auth/user', 'AuthController@user');
-	Route::put('auth/user/{user}','AuthController@update');
+	
 	Route::post('auth/logout', 'AuthController@logout');
 });
 
@@ -36,5 +36,5 @@ Route::group(['prefix' => 'v1', 'middleware' => 'jwt.auth'], function () {
 	Route::post('products','Api\v1\ProductController@store');
 	Route::put('products/{product}','Api\v1\ProductController@update');
 	Route::delete('products/{product}', 'Api\v1\ProductController@destroy');
-
+	Route::put('auth/user/{user}','AuthController@update');
 });
