@@ -24,6 +24,24 @@ class AuthController extends Controller
         ], 200);
     }
 
+    public function update(RegisterFormRequest $request)
+    {
+        $user = User::find($request->id);
+        $user->email = $request->email;
+        $user->name = $request->name;
+        $user->image = $request->image;
+        $user->role = $request->role;
+        $user->home_address = $request->home_address;
+        $user->office_address = $request->office_address;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return response([
+            'status' => 'success',
+            'data' => $user
+        ], 200);
+    }
+
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');

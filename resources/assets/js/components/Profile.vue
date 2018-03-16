@@ -3,13 +3,13 @@
       <div class="col-lg-4">
             <div class="contact-box">
                 <a href="#">
-                <div class="col-sm-4">
+                <div class="col-sm-4 pull-left">
                     <div class="text-center">
                         <img alt="image" class="img-circle m-t-xs img-responsive" src="http://webapplayers.com/inspinia_admin-v2.7.1/img/a8.jpg">
                         <div class="m-t-xs font-bold">Graphics designer</div>
                     </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-8 pull-right">
                     <h3><strong>John Smith</strong></h3>
                     <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
                     <address>

@@ -1,32 +1,33 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.18",
-        "vue": "^2.5.7",
-        "vue-axios": "^2.0.2",
-        "vue-loader": "^13.7.0",
-        "vue-router": "^3.0.1",
-        "vue-template-compiler": "^2.5.13",
-        "bootstrap": "^4.0.0",
-        "cross-env": "^5.1",
-        "font-awesome": "^4.7.0",
-        "jquery": "^3.2",
-        "jquery-slimscroll": "^1.3.8",
-        "laravel-mix": "^2.0",
-        "lodash": "^4.17.4",
-        "metismenu": "^2.7.4",
-        "pace": "github:HubSpot/pace#v1.0.2"
-    },
-    "dependencies": {
-        "@websanova/vue-auth": "^2.21.1-beta"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^0.18",
+    "bootstrap": "^4.0.0",
+    "cross-env": "^5.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2",
+    "jquery-slimscroll": "^1.3.8",
+    "laravel-mix": "^2.0",
+    "lodash": "^4.17.4",
+    "metismenu": "^2.7.4",
+    "pace": "github:HubSpot/pace#v1.0.2",
+    "vue": "^2.5.7",
+    "vue-axios": "^2.0.2",
+    "vue-loader": "^13.7.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "vue2-highcharts": "^1.1.8"
+  },
+  "dependencies": {
+    "@websanova/vue-auth": "^2.21.1-beta"
+  }
 }

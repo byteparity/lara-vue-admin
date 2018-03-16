@@ -7825,3 +7825,11 @@ body.rtls.top-navigation .footer.fixed {
   line-height: 90px;
   background: rgba(0,0,0,0.2);
 }
+
+.ibox-content .vue-highcharts {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin: 0;
+}

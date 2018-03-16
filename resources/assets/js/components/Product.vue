@@ -22,7 +22,9 @@
                             <td>{{index}}</td>
                             <td>{{item.name}}</td>
                             <td>{{item.description}}</td>
-                            <td>{{item.image}}</td>
+                            <td><img v-if="item.image !== null" :src="item.image" :alt="item.name" width="100px" />
+                            <img v-else src="http://via.placeholder.com/100x100?text=No+Image" :alt="item.name" />
+                            </td>
                             <td>{{item.category_id}}</td>
                             <td><button type="button" @click="editProduct($event, item.id)" class="btn btn-info"><i class="fa fa-edit"></i></button> <button @click="deleteProduct($event, item.id)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
                         </tr>

@@ -4,7 +4,7 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <router-link :to="{ name: 'users' }">
+                        <router-link :to="{ name: 'profile' }">
                         <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{name}}</strong>
                           <span class="text-muted text-xs block">Last Update : {{updated_at}} </span> </span> </span>
                         </router-link>
@@ -15,7 +15,7 @@
                 </li>
                 <router-link :to="{ name: 'dashboard' }" tag="li"><a><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span></a></router-link>
                 <router-link :to="{ name: 'product' }" tag="li"><a><i class="fa fa-th-large"></i> <span class="nav-label">Product</span></a></router-link>
-                <router-link :to="{ name: 'users' }" tag="li"><a><i class="fa fa-th-large"></i> <span class="nav-label">Users</span></a></router-link>
+                <router-link :to="{ name: 'profile' }" tag="li"><a><i class="fa fa-th-large"></i> <span class="nav-label">Profile</span></a></router-link>
                 <router-link :to="{ name: 'contact' }" tag="li"><a><i class="fa fa-th-large"></i> <span class="nav-label">Contact Us</span></a></router-link>
               </ul>
         </div>

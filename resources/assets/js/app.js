@@ -12,7 +12,7 @@ import Register from './components/Register.vue';
 import Login from './components/Login.vue';
 import Signup from './components/Signup.vue';
 import Contact from './components/Contact.vue';
-import Users from './components/Users.vue';
+import Profile from './components/Profile.vue';
 import Product from './components/Product.vue';
 import AddEditProduct from './components/AddEditProduct.vue';
 import VueToastr from '@deveodk/vue-toastr';
@@ -72,12 +72,12 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/users',
-            name: 'users',
-            component: Users,
+            path: '/profile',
+            name: 'profile',
+            component: Profile,
             meta: {
                 auth: true,
-                pageName: 'Users'
+                pageName: 'User Profile'
             }
         },
         {
