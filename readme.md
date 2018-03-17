@@ -1,7 +1,7 @@
 # lara-vue-Admin
 A repo for laravel vue authentication with admin theme tutorial.
 
-<img src="demo.gif" alt="lara-vue-Admin" width="400px">
+<img src="demo.gif" alt="lara-vue-Admin" width="700px">
 
 ## How to run
 1. Clone the repo
