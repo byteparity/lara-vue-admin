@@ -1,6 +1,6 @@
-# lara-vue-Admin
+# [lara-vue-Admin](http://laravueadmin.byteparity.com)
 A repo for laravel vue authentication with admin theme tutorial.
-
+## Demo http://laravueadmin.byteparity.com
 <img src="demo.gif" alt="lara-vue-Admin" width="700px">
 
 ## How to run
